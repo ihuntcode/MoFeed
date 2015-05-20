@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1UE-IF-xCS">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Feedler-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bCj-uo-yv3">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Feedler" id="6ep-ja-BiL"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="105" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ung-sD-rHT">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ListViewCell" rowHeight="105" id="jGs-bl-7Qu" customClass="ListViewCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jGs-bl-7Qu" id="go3-FD-6Wk">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="this is more than i ever imagened this could go well when i finsih it in the morning i will wake up and se it happy" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEj-7O-o5L">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="21"/>
+                                                    <color key="textColor" name="selectedKnobColor" catalog="System" colorSpace="catalog"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="5" y="6" width="364" height="88"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="OEj-7O-o5L"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="OEj-7O-o5L"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="title" destination="OEj-7O-o5L" id="DcH-tE-RKd"/>
+                                            <segue destination="zff-tl-Jd2" kind="show" identifier="DetailSegue" id="GTj-XR-x1R"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Wgf-7n-dWy"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="74X-Uu-LtG"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ung-sD-rHT" firstAttribute="top" secondItem="bCj-uo-yv3" secondAttribute="bottom" constant="2" id="5yS-wu-uOi"/>
+                            <constraint firstItem="bCj-uo-yv3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="7L4-2E-tlh"/>
+                            <constraint firstItem="ung-sD-rHT" firstAttribute="leading" secondItem="bCj-uo-yv3" secondAttribute="leading" id="Qh4-bg-CiD"/>
+                            <constraint firstAttribute="bottom" secondItem="ung-sD-rHT" secondAttribute="bottom" constant="-1" id="SEP-pk-YAa"/>
+                            <constraint firstItem="bCj-uo-yv3" firstAttribute="bottom" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Wfs-X1-OpN"/>
+                            <constraint firstItem="bCj-uo-yv3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gbE-vy-yiy"/>
+                            <constraint firstItem="bCj-uo-yv3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="hl7-L3-Jw3"/>
+                            <constraint firstItem="ung-sD-rHT" firstAttribute="trailing" secondItem="bCj-uo-yv3" secondAttribute="trailing" id="u2M-sN-DdV"/>
+                            <constraint firstAttribute="centerX" secondItem="bCj-uo-yv3" secondAttribute="centerX" id="z3V-mH-DYf"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Wfs-X1-OpN"/>
+                                <exclude reference="5yS-wu-uOi"/>
+                                <exclude reference="Qh4-bg-CiD"/>
+                                <exclude reference="SEP-pk-YAa"/>
+                                <exclude reference="u2M-sN-DdV"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="7L4-2E-tlh"/>
+                                <include reference="Wfs-X1-OpN"/>
+                                <exclude reference="hl7-L3-Jw3"/>
+                                <include reference="5yS-wu-uOi"/>
+                                <include reference="Qh4-bg-CiD"/>
+                                <include reference="SEP-pk-YAa"/>
+                                <include reference="u2M-sN-DdV"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Feedler" id="tpx-E8-lZV"/>
+                    <connections>
+                        <outlet property="feedList" destination="ung-sD-rHT" id="ghd-SQ-2P7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13.5" y="419"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qin-Vh-mkb">
+            <objects>
+                <navigationController id="1UE-IF-xCS" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WOB-Tg-PaZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="tAd-3a-bi5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JFo-yk-Byr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-652.5" y="480"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="0xq-vq-TU4">
+            <objects>
+                <viewController id="zff-tl-Jd2" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nxA-4M-1aD"/>
+                        <viewControllerLayoutGuide type="bottom" id="fUd-Ux-u1V"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rhu-xc-Vbl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1As-26-etR">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="-1" y="66" width="403" height="537"/>
+                                </variation>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="1As-26-etR"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="1As-26-etR"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="wwU-QP-pBv"/>
+                    <connections>
+                        <outlet property="webView" destination="1As-26-etR" id="Zye-Zq-Cbb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l3N-G1-4LT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="751.5" y="422"/>
+        </scene>
+    </scenes>
+</document>
